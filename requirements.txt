@@ -3,3 +3,4 @@ fastapi-socketio==0.0.10
 uvicorn==0.20.0
 nltk==3.6.3
 gensim==4.2.0
+python-multipart
