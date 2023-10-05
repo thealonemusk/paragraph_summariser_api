@@ -1,4 +1,16 @@
 from fastapi import FastAPI, HTTPException, Form
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+# Allow requests from localhost during development
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost", "http://127.0.0.1", "http://[::1]"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
