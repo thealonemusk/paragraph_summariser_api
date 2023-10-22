@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Form
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
-
+origins = ["*"]
 # Allow requests from localhost during development
 app.add_middleware(
     CORSMiddleware,
